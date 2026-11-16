@@ -1,3 +1,1 @@
-export default function Loading() {
-  return <main className="p-8" role="status">Loading…</main>;
-}
+export default function Loading() { return <main className="page-shell"><p className="eyebrow">Niche Collective</p><p className="loading-state" role="status">A moment, please…</p></main>; }

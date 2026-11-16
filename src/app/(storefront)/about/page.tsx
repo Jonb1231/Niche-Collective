@@ -1,0 +1,9 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+import { Newsletter } from "@/components/home/newsletter";
+export const metadata: Metadata = { title: "Our Story" };
+export default function About() {
+  return <main className="editorial-page"><header className="page-heading"><p className="eyebrow">Niche Collective / Established 2026</p><h1>INDEPENDENT<br />BY <em>DESIGN.</em></h1><p>A point of view, not a uniform.</p></header><section className="statement"><div className="statement-art"><Image src="/brand/signature-label.png" alt="Original Niche Collective signature label concept, Est. 2026" width={664} height={243} /><span className="eyebrow">Our name. Our point of view.</span></div><div className="statement-copy"><p className="eyebrow">The collective</p><h2>INDIVIDUALITY<br />IS THE <em>STANDARD.</em></h2><p>Established in 2026, Niche Collective is an independent luxury streetwear label. Our vision is a wardrobe defined by intention: expressive silhouettes, restrained palettes and distinctive details.</p></div></section><section className="editorial-copy"><h2>Considered form.<br /><em>Individual expression.</em></h2><div><p>We are drawn to the space between refinement and rebellion. Familiar shapes, seen from a different angle. The confidence of something understated. A detail that makes you look twice.</p><p>Our first collection is an exploration of that perspective. Relaxed denim, oversized proportions and a quiet palette form the starting point. Each concept is an invitation to make the piece your own.</p><p>This is the beginning. The garments shown here are design previews as the first chapter takes shape.</p><Link href="/collections" className="text-link">Discover the first chapter <ArrowUpRight size={17} /></Link></div></section><Newsletter /></main>;
+}

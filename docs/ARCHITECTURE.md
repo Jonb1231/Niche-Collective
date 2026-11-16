@@ -4,7 +4,7 @@
 
 `src/features` separates catalogue, collections, inventory, cart, checkout, orders, auth and admin. Queries run on the server with the signed-in user's Supabase client and RLS. `src/lib` owns service clients, configuration, storage and shared utilities; `src/components/ui` contains shadcn components.
 
-Server Components are the default. Only the browser Supabase client and error recovery component opt into client execution. Motion and GSAP are available for future interactive components. Zustand is intentionally deferred until shared interactive state is needed.
+Server Components are the default. Catalogue filters, product selectors, mobile navigation, the newsletter preview, scroll reveals and the React-context cart use Client Components. The cart persists validated variant selections in local storage. Native CSS provides motion, with reduced-motion support. No extra state or animation dependencies were added. See STOREFRONT.md for the data adapter and asset boundaries.
 
 ## Security boundaries
 
@@ -17,6 +17,6 @@ Server Components are the default. Only the browser Supabase client and error re
 
 ## Explicit limits
 
-This is a development foundation, not a completed shop. Cart UI, product detail selection, signup/password recovery, stock reservation, line-item snapshots, fulfilment, refunds, taxes, shipping and rate limiting remain future work. Stock is checked but not reserved or decremented; simultaneous test checkouts can exceed stock. Live payments are therefore blocked in code. The success URL does not confirm payment; account orders come from verified webhook records.
+The frontend is a complete design preview, not a live commerce service. Product and collection views use the typed demo adapter; adding Supabase credentials alone does not turn demo products into live inventory. Signup/password recovery, live catalogue projection, stock reservation, line-item snapshots, fulfilment, refunds, taxes, shipping and rate limiting remain future work. Stock is checked but not reserved or decremented; simultaneous test checkouts can exceed stock. Live payments are therefore blocked in code. The success URL does not confirm payment; account orders come from verified webhook records.
 
 The migration is for a new hosted Supabase project. Review and apply it once. Existing hosted schemas/policies require reconciliation before use. Local tests exercise validation and webhook signatures; hosted RLS, auth, storage, SQL transactions and actual Stripe calls require credentials and separate integration checks.

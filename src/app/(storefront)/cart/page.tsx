@@ -1,3 +1,4 @@
-export default function Cart() {
-  return <main className="p-8"><h1 className="text-3xl mb-8">Your bag</h1><p>Your bag is empty. Browse the catalogue to discover upcoming pieces.</p></main>;
-}
+import type { Metadata } from "next";
+import { CartView } from "@/features/cart/cart-view";
+export const metadata: Metadata = { title: "Your Bag" };
+export default function Cart() { return <main className="page-shell"><header className="page-heading"><p className="eyebrow">Your considered selection</p><h1>THE <em>BAG.</em></h1></header><CartView /></main>; }

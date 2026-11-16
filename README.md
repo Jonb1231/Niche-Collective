@@ -1,6 +1,6 @@
-﻿# Niche Collective
+# Niche Collective
 
-Local Next.js App Router + TypeScript + Tailwind CSS v4 development foundation, using hosted Supabase and Stripe test mode. No Docker, WSL, local database or deployment is required.
+Local Next.js App Router + TypeScript + Tailwind CSS v4 storefront for Niche Collective, with an editorial homepage, catalogue filters, product variants, lookbook and persistent preview bag. Supabase and Stripe test-mode foundations are retained. No Docker, WSL, local database or deployment is required. See [Storefront implementation](docs/STOREFRONT.md) for the changed files, original/generated asset provenance, exact image prompts and launch requirements.
 
 ## Start on this computer
 
@@ -11,7 +11,7 @@ $env:Path += ';' + [Environment]::GetEnvironmentVariable('Path','Machine') + ';'
 npm.cmd run dev
 ```
 
-Open http://localhost:3000. The homepage, catalogue connection messages and login connection message work before credentials exist. Stop with Ctrl+C. Use Node 22+; the verified installation is Node 26.13.1/npm 11.20.0.
+Open http://localhost:3000. The complete preview storefront works before credentials exist. Products, AUD prices and sizes are clearly labelled demonstration content. Checkout is disabled and the newsletter does not save or subscribe emails. Account sign-in remains unavailable until configured. Stop with Ctrl+C. Use Node 22+; the verified installation is Node 26.13.1/npm 11.20.0.
 
 ## Hosted service setup
 
