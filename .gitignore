@@ -23,6 +23,11 @@
 # misc
 .DS_Store
 *.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
 
 # debug
 npm-debug.log*
@@ -33,9 +38,18 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 !.env.example
+.envrc
+secrets/
+credentials.json
+service-account*.json
 
 /playwright-report/
 /test-results/
+/blob-report/
+/dist/
+/.turbo/
+/supabase/.temp/
+/supabase/.branches/
 
 # vercel
 .vercel

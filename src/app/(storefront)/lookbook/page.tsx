@@ -1,0 +1,10 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+import { ProductImage } from "@/components/product/product-image";
+import { Reveal } from "@/components/ui/reveal";
+export const metadata: Metadata = { title: "Lookbook — Chapter One" };
+export default function Lookbook() {
+  return <main className="editorial-page"><header className="page-heading"><p className="eyebrow">The visual journal / Chapter one</p><h1>FORM. IDENTITY.<br /><em>EXPRESSION.</em></h1><p>A first look at the world of Niche Collective. An editorial study for Collection 001.</p></header><figure className="editorial-image"><Image src="/images/campaign-concept.png" alt="AI campaign study: oversized streetwear and raw concrete architecture" fill sizes="100vw" preload /><figcaption>01 / The beginning — AI-generated campaign concept</figcaption></figure><Reveal className="editorial-copy"><h2>A different<br /><em>perspective.</em></h2><div><p>Quiet silhouettes. Strong shadows. A tension between softness and structure. The first visual study explores how an everyday piece can become a form of individual expression.</p><p>These images set the creative direction. The campaign study is AI-generated; the denim details below come from the original Niche Collective design concepts.</p></div></Reveal><div className="lookbook-grid"><figure><div className="lookbook-frame"><ProductImage image={{ src: "/images/shorts-artichoke-spec.png", alt: "Original artichoke carpenter shorts design concept", crop: "front" }} /></div><figcaption><span>02 / Form</span><span>NC–DS001 · Washed artichoke concept</span></figcaption></figure><figure><div className="lookbook-frame"><ProductImage image={{ src: "/images/shorts-black-spec.png", alt: "Original back-pocket signature embroidery concept", crop: "detail" }} /></div><figcaption><span>03 / Identity</span><span>The signature · Design detail</span></figcaption></figure></div><div className="section-space" style={{ paddingTop: 0 }}><Link href="/shop" className="button button-dark">Explore Collection 001 <ArrowUpRight size={17} /></Link></div></main>;
+}

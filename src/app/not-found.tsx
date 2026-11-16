@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function NotFound() { return <main className="page-shell"><div className="empty-state"><p className="eyebrow">404 / Off the beaten path</p><h1 style={{ fontSize: "clamp(36px,5vw,70px)", margin: "25px 0" }}>A different direction.</h1><p>This page or piece could not be found.</p><Link href="/shop" className="button button-dark">Explore the collection ↗</Link></div></main>; }
